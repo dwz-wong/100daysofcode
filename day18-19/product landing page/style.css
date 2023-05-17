@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
+
+:root {
+    --white: rgba(255, 255, 255);
+    --black: rgba(0, 0, 0);
+    --light-gray: #D3D3D3;
+    --light-orange: #ffcc66;
+    --bitter-400-700: 'Bitter', serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { font-family: var(--bitter-400-700); }
+
+#header,
+.nav-list,
+#main,
+#products,
+.product { display: flex; }
+
+#header,
+#main,
+.product { align-items: center; }
+
+#header,
+.product { justify-content: space-between; }
+
+#header-img,
+#main > img,
+.product> img {
+    height: auto;
+    display: block;
+}
+
+#header { 
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    background-color: var(--light-gray);
+}
+
+.nav-list {
+    list-style: none;
+    font-weight: 700;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--black);
+}
+
+#highlights { display: grid; }
+.text-group > p { line-height: 1.8; }
+
+button,
+#submit {
+    cursor: pointer;
+    border: none;
+    font-family: var(--bitter-400-700);
+    font-weight: 700;
+    background-color: var(--light-orange);
+    text-transform: uppercase;
+}
+
+#products { justify-content: space-evenly; }
+.product { flex-direction: column; }
+
+.product > div > ul {
+    list-style-position: inside;
+    line-height: 1.5;
+}
+
+#buy-now { width: 100%; }
+
+#newsletter > h1,
+#newsletter > p { 
+    text-align: center; 
+    line-height: 1.5; 
+}
+
+#form {
+    display: grid;
+    place-content: center;
+}
+
+#email { font-family: var(--bitter-400-700); }
+
+/*** MOBILE SIZE ***/
+
+@media screen and (max-width: 480px) {
+    #header { 
+        justify-content: center; 
+        padding: 4.5vw; 
+    }
+
+    #header-img { width: 70%; }
+
+    #nav-bar { display: none; }
+
+    #highlights { margin-top: 27vw; }
+
+    #main {
+        flex-direction: column-reverse;
+        padding: 0 5vw;
+        gap: 15vw;
+    }
+
+    .text-group { padding: 3vw 5vw; }
+    .title { font-size: 7.5vw; }
+
+    .text-group > p {
+        margin-top: 6vw;
+        font-size: 3.135vw;
+    }
+
+    button {
+        border-radius: 1.5vw;
+        padding: 3vw 7.5vw;
+        margin-top: 7.5vw;
+        font-size: 3.135vw;
+    }
+
+    #main > img { width: 90%; }
+
+    #video {
+        height: 50vw;
+        width: 81vw;
+        margin: 15vw auto;
+    }
+
+    #products {
+        flex-direction: column;
+        align-items: center;
+        padding: 6vw;
+        gap: 6vw;
+    }
+
+    .product {
+        border: 0.390vw solid var(--black);
+        width: 90%;
+        padding: 4vw;
+    }
+
+    .product > img { width: 70%; }
+    .product > div { margin-top: 6vw; }
+    .phone-model, .price { font-size: 3vw; }
+
+    .product > div > ul {
+        margin-top: 3vw;
+        font-size: 2.4vw;
+    }
+
+    .price { margin-top: 3vw; }
+
+    #newsletter { padding: 6vw; }
+    #newsletter > h1 { font-size: 6.249vw; }
+    #newsletter > p { font-size: 3.135vw; }
+
+    #form {
+        margin-top: 3vw;
+        gap: 3vw;
+    }
+
+    #email {
+        padding: 1.5vw 3vw;
+        border-radius: 0.978vw;
+        font-size: 3.135vw;
+    }
+
+    #submit { 
+        padding: 2.4vw; 
+        font-size: 3.135vw;
+    }
+}
+
+/*** TABLET SIZE ***/
+
+@media screen and (min-width: 480.5px) and (max-width: 768px) {
+    #header { padding: 3vw; }
+
+    #header-img { width: 40%; }
+
+    .nav-list {
+        gap: 10vw;
+        margin-right: 10vw;
+    }
+
+    .nav-link { font-size: 2.09vw; }
+    #highlights { margin-top: 18vw; }
+
+    #main {
+        flex-direction: column-reverse;
+        padding: 0 10vw;
+        gap: 10vw;
+    }
+
+    .text-group { padding: 2vw 10vw; }
+    .title { font-size: 5vw; }
+
+    .text-group > p {
+        margin-top: 4vw;
+        font-size: 2.09vw;
+    }
+
+    button {
+        border-radius: 1vw;
+        padding: 2vw 5vw;
+        margin-top: 5vw;
+        font-size: 2.09vw;
+    }
+
+    #main > img { width: 70%; }
+
+    #video {
+        height: 52vw;
+        width: 85vw;
+        margin: 10vw auto;
+    }
+
+    #products { 
+        flex-direction: column;
+        align-items: center;
+        padding: 4vw;
+        gap: 4vw;
+    }
+
+    .product {
+        border: 0.260vw solid var(--black);
+        max-width: 50%;
+        padding: 4vw;
+    }
+
+    .product > img { width: 70%; }
+    .product > div { margin-top: 4vw; }
+    .phone-model, .price { font-size: 2vw; }
+
+    .product > div > ul {
+        margin-top: 2vw;
+        font-size: 1.6vw;
+    }
+
+    .price { margin-top: 2vw; }
+
+    #newsletter { padding: 4vw; }
+    #newsletter > h1 { font-size: 4.166vw; }
+    #newsletter > p { font-size: 2.09vw; }
+
+    #form {
+        margin-top: 2vw;
+        gap: 2vw;
+    }
+
+    #email {
+        padding: 1vw 2vw;
+        border-radius: 0.652vw;
+        font-size: 2.09vw;
+    }
+
+    #submit { 
+        padding: 1.6vw; 
+        font-size: 2.09vw;
+    }
+}
+
+/*** DESKTOP SIZE ***/
+
+@media screen and (min-width: 768.5px) {
+    #header { padding: 1.5vw; }
+    #header-img { width: 20%; }
+
+    .nav-list {
+        gap: 5vw;
+        margin-right: 5vw;
+    }
+
+    .nav-link { font-size: 1.045vw; }
+    #highlights { margin-top: 9vw; }
+
+    #main {
+        padding: 0 5vw;
+        gap: 5vw;
+    }
+    
+    .text-group { padding: 1vw 5vw; }
+    .title { font-size: 2.5vw; }
+
+    .text-group > p {
+        margin-top: 2vw;
+        font-size: 1.045vw;
+    }
+
+    button {
+        border-radius: .5vw;
+        padding: 1vw 2.5vw;
+        margin-top: 2.5vw;
+        font-size: 1.045vw;
+    }
+
+    #main > img { width: 55%; }
+
+    #video {
+        height: 26vw;
+        width: 42vw;
+        margin: 5vw auto;
+    }
+
+    #products { 
+        padding: 2vw; 
+        gap: 2vw; 
+    }
+
+    .product {
+        border: 0.130vw solid var(--black);
+        width: 25%;
+        padding: 2vw;
+    }
+
+    .product > img { width: 70%; }
+    .product > div { margin-top: 2vw; }
+    .phone-model, .price { font-size: 1vw; }
+
+    .product > div > ul {
+        margin-top: 1vw;
+        font-size: .8vw;
+    }
+
+    .price { margin-top: 1vw; }
+
+    #newsletter { padding: 2vw; }
+    #newsletter > h1 { font-size: 2.083vw; }
+    #newsletter > p { font-size: 1.045vw; }
+
+    #form {
+        margin-top: 1vw;
+        gap: 1vw;
+    }
+
+    #email { 
+        padding: .5vw 1vw;
+        border-radius: 0.326vw;
+        font-size: 1.045vw;
+    }
+
+    #submit { 
+        padding: .8vw; 
+        font-size: 1.045vw;
+    }
+}
