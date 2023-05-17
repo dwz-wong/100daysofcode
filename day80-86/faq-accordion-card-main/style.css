@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+.attribution { font-size: 11px; text-align: center; color: var(--white-clr); }
+.attribution a { color: hsl(228, 45%, 44%); color: violet; }
+
+:root {
+    /* Font Family */
+    --kumbh-sans-font-400-700: 'Kumbh Sans', sans-serif;
+    /* Colors */
+    --white-clr: hsl(0, 0%, 100%);
+    /*
+        Primary
+        Text    
+    */
+    --very-dark-desaturated-blue-clr: hsl(238, 29%, 16%);
+    --soft-red-clr: hsl(14, 88%, 65%);
+    /* 
+        Gradient
+        Background gradient 
+    */
+    --soft-violet-clr: hsl(273, 75%, 66%);
+    --soft-blue-clr: hsl(240, 63%, 65%);
+    /* 
+        Neutral 
+        Text
+    */
+    --very-dark-grayish-blue-clr: hsl(237, 12%, 33%);
+    --dark-grayish-blue-clr: hsl(240, 6%, 50%);
+    /* Dividers */
+    --light-grayish-blue-clr: hsl(240, 5%, 91%);
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(var(--soft-violet-clr), var(--soft-blue-clr));
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#faq__card {
+    background-color: var(--white-clr);
+    border-radius: 20px;
+    padding: 0;
+    width: 320px;
+}
+
+#card__body {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+/* IMG */
+#faq__img {
+    position: relative;
+    max-width: 220px;
+}
+
+.faq__illustration {
+    content: url("images/illustration-woman-online-mobile.svg");
+    top: -11.25rem;
+    left: 0;
+    z-index: 1;
+}
+
+.faq__pattern {
+    content: url("images/bg-pattern-mobile.svg");
+    max-width: 210px;
+    top: 0;
+    left: 3.45rem;
+    z-index: 0;
+}
+
+#wrapper {
+    position: relative;
+    max-width: 170px;
+    display: none;
+}
+
+.faq__illustration,
+.faq__pattern,
+.faq__box {
+    height: auto;
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+
+/* CONTENT */
+#card__title {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: var(--kumbh-sans-font-400-700);
+    font-weight: 700;
+}
+
+#accordion__button,
+#accordion__body {
+    padding: 1rem 0;
+}
+
+#accordion__button {
+    color: var(--very-dark-grayish-blue-clr);
+    font-family: var(--kumbh-sans-font-400-700);
+    font-size: .8rem;
+}
+
+#accordion__button:hover {
+    color: var(--soft-red-clr);
+}
+
+#accordion__button:focus {
+    box-shadow: none;
+}
+
+#accordion__button:not(.collapsed) {
+    background-color: var(--white-clr);
+    font-weight: 700;
+}
+
+#accordion__button::after,
+#accordion__button:not(.collapsed)::after {
+    background-image: url("images/icon-arrow-down.svg");
+    background-size: .6rem;
+}
+
+#accordion__button::after {
+    background-position: right center;
+    transition: none;
+}
+
+#accordion__button:not(.collapsed)::after {
+    background-position: left center;
+}
+
+#accordion__text {
+    margin-bottom: 0;
+    color: var(--dark-grayish-blue-clr);
+    font-family: var(--kumbh-sans-font-400-700);
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 992px) {
+    #faq__card {
+        width: 900px;
+    }
+
+    #card__body {
+        display: flex;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    /* IMG */
+    #faq__img {
+        max-width: 500px;
+    }
+
+    .faq__illustration {
+        content: url("images/illustration-woman-online-desktop.svg");
+        top: 7.9rem;
+        left: -4.5rem;
+    }
+
+    .faq__pattern {
+        content: url("images/bg-pattern-desktop.svg");
+        max-width: 1000px;
+        top: -14.2rem;
+        left: -34.2rem;
+    }
+
+    #wrapper {
+        display: block;
+        top: 15.6rem;
+        right: 28.7rem;
+        z-index: 2
+    }
+    
+    /* CONTENT */
+    #card__content {
+        padding: 3.5rem 4rem 5rem;
+    }
+
+    #card__title {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    #card__accordion {
+        margin-top: 1.5rem;
+    }
+
+    #accordion__button,
+    #accordion__text {
+        font-size: .9rem;
+    }
+    
+    #accordion__button::after,
+    #accordion__button:not(.collapsed)::after {
+        background-size: .7rem;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/cb6a4e11b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="ping__container">
+    <img src="images/logo.svg" alt="logo for PING" class="ping__logo">
+    
+    <h1 class="ping__title"><span>We are launching</span> soon!</h1>
+    <p class="ping__description">Subscribe and get notified</p>
+    
+    <form method="get" id="ping__form" class="ping__form">
+      <div>
+        <input type="text" placeholder="Your email address..." id="ping__input" class="ping__input">
+        <p id="ping__error" class="ping__error"><i>Please provide a valid email address</i></p>
+      </div>
+      <input type="submit" value="Notify Me" class="ping__btn">
+    </form>
+
+    <img src="images/illustration-dashboard.png" alt="" class="ping__illustration">
+
+    <div class="ping__social">
+      <ul class="ping__social_list">
+        <li class="ping__social_item"><i class="fa-brands fa-facebook-f"></i></li>
+        <li class="ping__social_item"><i class="fa-brands fa-twitter"></i></li>
+        <li class="ping__social_item"><i class="fa-brands fa-instagram"></i></li>
+      </ul>
+    </div>
+
+    <p class="ping__copyright">&copy; Copyright Ping. All rights reserved.</p>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/dwz-wong">HL Wong</a>.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

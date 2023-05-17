@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>freeCodeCamp | Personal Portfolio Webpage</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cb6a4e11b3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav id="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#profile" id="nav-link">Profile</a></li>
+                <li class="nav-item"><a href="#projects" id="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" id="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="welcome-section">
+            <div>
+                <h1>Hey there,</h1>
+                <h1>Welcome to visit my Certification Project: Personal Portfolio Webpage!</h1>
+            </div>
+        </section>
+
+        <section id="profile">
+            <h1>My Profile</h1>
+            <img src="images/HL WONG.png" alt="profile-pic" class="profile-pic">
+            <ul class="profile-list">
+                <li class="profile-item"><a href="https://github.com/dwz-wong" class="fa-brands fa-github" id="profile-link" target="_blank"></a></li>
+                <li class="profile-items"><a href="https://twitter.com/dwz_wong" class="fa-brands fa-twitter" id="profile-link" target="_blank"></a></li>
+                <li class="profile-items"><a href="https://www.freecodecamp.org/dwz_wong" class="fa-brands fa-free-code-camp" id="profile-link" target="_blank"></a></li>
+            </ul>
+            <p class="profile-description"><i>"A student, developer, and freelancer good at fast typing with a speed of 107 wpm and accuracy of 98.5%"</i></p>
+        </section>
+
+        <section id="projects">
+            <h1>Here is the projects I have done:</h1>
+            <div class="project-container">
+                <a href="https://github.com/dwz-wong/interactive-card-details-form" target="_blank">
+                    <div class="project-tile">
+                        <img src="images/interactive-card-details-form-preview.jpg" alt="interactive-card-details-form">
+                        <h3>Interactive Card Details Form</h3>
+                    </div>
+                </a>
+
+                <a href="https://github.com/dwz-wong/product-preview-card-component" target="_blank">
+                    <div class="project-tile">
+                        <img src="images/product-preview-card-component-preview.jpg" alt="product-preview-card-component">
+                        <h3>Product Preview Card Component</h3>
+                    </div>
+                </a>
+
+                <a href="https://github.com/dwz-wong/profile-card-component" target="_blank">
+                    <div class="project-tile">
+                        <img src="images/profile-card-component-preview.jpg" alt="profile-card-component">
+                        <h3>Profile Card Component</h3>
+                    </div>
+                </a>
+            </div>
+
+            <button id="more-projects" onclick="window.open('https://github.com/dwz-wong?tab=repositories')">More Projects<i class="fa-solid fa-angle-right"></i></button>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <div class="contact">
+                <div>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <a href="#" target="_blank">@dwz_wong</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-github"></i>
+                    <a href="#" target="_blank">@dwz-wong</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

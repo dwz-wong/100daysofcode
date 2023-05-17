@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    /* Font Family */
+    --libre-franklin-font-300-600-700: 'Libre Franklin', sans-serif;
+    /* Colors */
+    --white-clr: hsl(0, 0%, 100%);
+    /* Primary */
+    --blue-clr: hsl(223, 87%, 63%);
+    /* Secondary */
+    --pale-blue-clr: hsl(223, 100%, 88%);
+    --light-red-clr: hsl(354, 100%, 66%);
+    /* Neutral */
+    --gray-clr: hsl(0, 0%, 59%);
+    --very-dark-blue-clr: hsl(209, 33%, 12%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--libre-franklin-font-300-600-700);
+}
+
+.ping__logo {
+    height: auto;
+    max-width: 86px;
+    display: block;
+    margin: 4rem auto 0;
+}
+
+.ping__title {
+    margin-top: 2.8rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.ping__title > span {
+    font-weight: 300;
+    color: var(--gray-clr);
+}
+
+.ping__description {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.ping__form {
+    margin-top: 2.5rem;
+    
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ping__form > div {
+    width: 100%;
+    max-width: 400px;
+}
+
+.ping__input {
+    width: 100%;
+    border: 1px solid var(--blue-clr);
+    border-radius: 50px;
+    padding: 1rem 1.5rem;
+    font-family: var(--libre-franklin-font-300-600-700);
+}
+
+.ping__error {
+    display: none;
+    margin: .5rem 0 0 1.5rem;
+    color: var(--light-red-clr);
+    font-size: .8rem;
+}
+
+.ping__btn {
+    cursor: pointer;
+    align-self: start;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 3.7rem;
+    color: var(--white-clr);
+    background-color: var(--blue-clr);
+    font-family: var(--libre-franklin-font-300-600-700);
+    font-weight: 600;
+    box-shadow: 0 8px 20px 0px rgba(79,125,243,0.5);
+}
+
+.ping__btn:hover {
+    opacity: 0.85;
+}
+
+.ping__illustration {
+    height: auto;
+    width: 100%;
+    max-width: 580px;
+    display: block;
+    margin: 5rem auto 0;
+}
+
+.ping__social {
+    margin-top: 5rem;
+}
+
+.ping__social_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ping__social_item {
+    cursor: pointer;
+    border: 1px solid var(--pale-blue-clr);
+    border-radius: 50px;
+    color: var(--blue-clr);
+}
+
+.ping__social_item:hover {
+    color: var(--white-clr);
+    background-color: var(--blue-clr);
+}
+
+.fa-brands:not(.fa-facebook-f) {
+    padding: .5rem;
+}
+
+.fa-facebook-f {
+    padding: .5rem .7rem;
+}
+
+.ping__copyright {
+    text-align: center;
+    color: var(--gray-clr);
+    margin: 1.5rem 0 3rem;
+    font-size: .85rem;
+}
+
+@media screen and (max-width: 480px) {
+    .ping__logo {
+        width: 100%;
+        max-width: 66px;
+    }
+
+    .ping__title {
+        font-size: 1.7rem;
+    }
+
+    .ping__description {
+        font-size: .9rem;
+    }
+
+    .ping__form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ping__form > div {
+        width: 90%;
+        max-width: 380px;
+    }
+
+    .ping__error {
+        text-align: center;
+        margin: .5rem 0 1rem 0;
+    }
+
+    .ping__btn {
+        align-self: center;
+        width: 90%;
+        max-width: 380px;
+    }
+
+    .ping__illustration {
+        width: 90%;
+        margin-top: 5.5rem;
+    }
+
+    .ping__social {
+        margin-top: 8rem;
+    }
+    
+    .ping__copyright {
+        margin-top: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 480.5px) and (max-width: 768px) {
+    .ping__form {
+        margin: 2.5rem 1rem;
+    }
+
+    .ping__illustration {
+        width: 90%;
+    }
+}

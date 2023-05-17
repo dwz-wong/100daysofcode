@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
+
+:root {
+    --assistant-400-700: 'Assistant', sans-serif;
+    --white-clr: hsl(0, 0%, 100%);
+    --black-clr: hsl(0, 0%, 0%);
+    --red-clr: rgba(255, 0, 0);
+    --blizzard-clr-1: #06283D;
+    --blizzard-clr-2: #256D85;
+    --blizzard-clr-3: #47B5FF;
+    --blizzard-clr-4: #DFF6FF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { font-family: var(--assistant-400-700); }
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    position: fixed;
+    background-color: var(--blizzard-clr-4);
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+#nav-link {
+    text-decoration: none;
+    color: var(--black-clr);
+    font-weight: 700;
+}
+
+/* WELCOME SECTION */
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blizzard-clr-1);
+    height: 100vh;
+}
+
+#welcome-section > div > h1 {
+    color: var(--white-clr);
+    font-weight: 400;
+}
+
+/* PROFILE */
+#profile {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blizzard-clr-2);
+}
+
+#profile > h1 {
+    text-decoration: underline;
+    color: var(--white-clr);
+}
+
+.profile-pic {
+    height: auto;
+    display: block;
+}
+
+.profile-list {
+    list-style: none;
+    display: flex;
+}
+
+#profile-link {
+    text-decoration: none;
+    color: var(--white-clr);
+}
+#profile-link:hover { color: var(--black-clr); }
+
+.profile-description {
+    color: var(--white-clr);
+    text-align: center;
+}
+
+/* PROJECTS */
+#projects {
+    height: 100vh;
+    background-color: var(--blizzard-clr-3);
+}
+
+#projects > h1 {
+    display: inline-block;
+    text-align: center;
+    color: var(--white-clr);
+    text-decoration: underline;
+    width: 100%;
+}
+
+.project-container > a {
+    text-decoration: none;
+    color: var(--white-clr);
+    background-color: var(--blizzard-clr-2);
+    width: 70%;
+}
+
+.project-container > a:hover {
+    background-color: var(--blizzard-clr-4);
+    color: var(--black-clr);
+}
+
+.project-tile > img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.project-tile > h3 { text-align: center; }
+
+#more-projects {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: var(--assistant-400-700);
+    background-color: var(--blizzard-clr-2);
+    color: var(--white-clr);
+    font-weight: 700;
+}
+
+/* CONTACT */
+
+#contact {
+    height: 100vh;
+    background-color: var(--blizzard-clr-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact > h1 { text-decoration: underline; }
+
+.contact { background-color: rgba(0, 0, 0, 50%); }
+
+.contact > div {
+    display: flex;
+    align-items: center;
+}
+
+.fa-square-twitter,
+.fa-square-github { color: var(--white-clr); font-size: 2.5vw; }
+
+.contact > div > a {
+    text-decoration: none; 
+    color: var(--white-clr);
+}
+
+.contact > div > a:hover { color: var(--red-clr); }
+
+@media screen and (max-width: 480px) {
+    
+    /* NAVBAR */
+    #navbar { 
+        justify-content: center;
+        padding: 6vw 15vw; 
+    }
+
+    .nav-list { gap: 15vw; }
+
+    #nav-link { font-size: 3.9vw; }
+
+    /* WELCOME SECTION */
+    #welcome-section > div > h1 {
+        text-align: center;
+        font-size: 5vw; 
+    }
+
+    /* PROFILE */
+    #profile > h1 { font-size: 5vw; }
+
+    .profile-pic { 
+        width: 30%; 
+        margin-top: 13.5vw;
+    }
+
+    .profile-list {
+        gap: 6vw;
+        margin-top: 9vw;
+    }
+
+    #profile-link { font-size: 4.5vw; }
+
+    .profile-description {
+        margin-top: 9vw;
+        font-size: 4vw;
+    }
+
+    /* PROJECTS */
+    #projects { height: 190vh; }
+
+    #projects > h1 {
+        margin-top: 12vw;
+        font-size: 5vw;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+        margin-top: 8vw;
+    }
+
+    .project-tile > h3 {
+        margin: 3.5vw 0;
+        font-size: 4vw;
+    }
+
+    #more-projects {
+        padding: 3vw 4.5vw;
+        font-size: 3.6vw;
+        margin: 8vw auto 0;
+    }
+
+    .fa-angle-right {
+        margin-left: 3vw;
+        font-size: 3.135vw;
+    }
+
+    #contact > h1 { font-size: 5vw; }
+    
+    .contact {
+        width: 80%; 
+        margin-top: 9vw;
+        padding: 9vw 15vw;
+    }
+
+    .contact > div { gap: 4.5vw; }
+
+    .contact > div:not(:first-child) { margin-top: 6vw; }
+
+    .fa-square-twitter,
+    .fa-square-github { font-size: 7.5vw; }
+
+    .contact > div > a { font-size: 3.135vw; }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    /* NAVBAR */
+    #navbar {
+        justify-content: center;
+        padding: 4vw 10vw;
+    }
+
+    .nav-list { gap: 10vw; }
+
+    #nav-link { font-size: 2.6vw; }
+
+    /* WELCOME SECTION */
+    #welcome-section > div > h1 {
+        text-align: center;
+        font-size: 4.166vw;
+    }
+
+    /* PROFILE */
+    #profile > h1 { font-size: 4.166vw; }
+
+    .profile-pic {
+        width: 25%;
+        margin-top: 9vw;
+    }
+
+    .profile-list {
+        gap: 4vw;
+        margin-top: 6vw;
+    }
+
+    #profile-link { font-size: 3vw; }
+
+    .profile-description {
+        margin-top: 6vw;
+        font-size: 3vw;
+    }
+
+    /* PROJECTS */
+    #projects { height: 285vh; }
+
+    #projects > h1 {
+        margin-top: 14vw;
+        font-size: 4.166vw;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+        margin-top: 8vw;
+    }
+
+    .project-tile > h3 {
+        margin: 3vw 0;
+        font-size: 2.604vw;
+    }
+
+    #more-projects {
+        padding: 2vw 3vw;
+        font-size: 2.4vw;
+        margin: 8vw auto;
+    }
+
+    .fa-angle-right {
+        margin-left: 2vw;
+        font-size: 2.09vw;
+    }
+
+    /* CONTACT */
+    #contact > h1 { font-size: 4.166vw; }
+
+    .contact {
+        width: 60%;
+        margin-top: 6vw;
+        padding: 6vw 10vw;
+    }
+
+    .contact > div { gap: 3vw; }
+
+    .contact > div:not(:first-child) { margin-top: 4vw; }
+
+    .fa-square-twitter,
+    .fa-square-github { font-size: 5vw; }
+
+    .contact > div > a { font-size: 2.09vw; }
+}
+
+@media screen and (min-width: 768.5px) {
+    /* NAVBAR */
+    #navbar { 
+        justify-content: flex-end;
+        padding: 2vw 5vw; 
+    }
+
+    .nav-list { gap: 5vw; }
+
+    #nav-link { font-size: 1.3vw; }
+
+    /* WELCOME SECTION */
+    #welcome-section > div > h1 { font-size: 2.083vw; }
+
+    /* PROFILE */
+    #profile > h1 { font-size: 2.083vw; }
+
+    .profile-pic {
+        width: 15%;
+        margin-top: 4.5vw;
+    }
+
+    .profile-list {
+        gap: 2vw;
+        margin-top: 3vw;
+    }
+
+    #profile-link { font-size: 1.5vw; }
+
+    .profile-description {
+        margin-top: 3vw;
+        font-size: 1.5vw; 
+    }
+
+    /* PROJECTS */
+    #projects { height: 100vh; }
+
+    #projects > h1 {
+        margin-top: 7vw;
+        font-size: 2.083vw;
+    }
+
+    .project-container { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        margin-top: 4vw; 
+    }
+
+    .project-tile > h3 {
+        margin: 1.5vw 0;
+        font-size: 1.302vw;
+    }
+
+    #more-projects {
+        padding: 1vw 1.5vw;
+        font-size: 1.2vw;
+        margin: 4vw auto;
+    }
+
+    .fa-angle-right {
+        margin-left: 1vw;
+        font-size: 1.045vw;
+    }
+
+    /* CONTACT */
+    #contact > h1 { font-size: 2.083vw; }
+
+    .contact {
+        width: 40%;
+        margin-top: 3vw;
+        padding: 3vw 5vw;
+    }
+
+    .contact > div { gap: 1.5vw; }
+
+    .contact > div:not(:first-child) { margin-top: 2vw; }
+
+    .fa-square-twitter,
+    .fa-square-github { font-size: 2.5vw; }
+
+    .contact > div > a { font-size: 1.045vw; }
+}

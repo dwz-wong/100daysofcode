@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+.attribution { font-size: 11px; text-align: center; color: var(--white-clr); }
+.attribution a { color: hsl(228, 45%, 44%); color: var(--orange-clr); }
+
+:root {
+    /* Font Family */
+    --overpass-font-400-700: 'Overpass', sans-serif;
+    /* Primary */
+    --orange-clr: hsl(25, 97%, 53%);
+    /* Neutral */
+    --white-clr: hsl(0, 0%, 100%);
+    --black-clr: hsl(0, 0%, 0%);
+    --light-grey-clr: hsl(217, 12%, 63%);
+    --medium-grey-clr: hsl(216, 12%, 54%);
+    --dark-blue-clr: hsl(213, 19%, 18%);
+    --dark-blue-clr-2: hsl(213, 15%, 25%);
+    --very-dark-blue-clr: hsl(216, 12%, 8%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--overpass-font-400-700);
+    background-color: var(--very-dark-blue-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.rating__container {
+    width: 100%;
+    max-width: 430px;
+    padding: 2rem;
+    background-color: var(--dark-blue-clr);
+    border-radius: 2rem;
+}
+
+.rating__star {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    padding: 1rem;
+    background-color: var(--dark-blue-clr-2);
+    border-radius: 50%;
+}
+
+.rating__title {
+    /*max-width: 180px;*/
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: var(--white-clr);
+}
+
+.rating__description {
+    /*max-width: 320px;*/
+    margin-top: 1rem;
+    color: var(--light-grey-clr);
+    line-height: 1.6;
+}
+
+.rating__form { 
+    margin-top: 1.5rem;
+}
+
+.rating__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--light-grey-clr);
+}
+
+.rating__item {
+    cursor: pointer;
+    background-color: var(--dark-blue-clr-2);
+    border-radius: 50%;
+}
+
+.rating__item:nth-child(1) {
+    padding: .9rem 1.4rem;
+}
+
+.rating__item:not(:nth-child(1)) {
+    padding: .9rem 1.3rem;
+}
+
+.rating__item:hover {
+    color: var(--white-clr);
+    background-color: var(--orange-clr);
+}
+
+.rating__item:active {
+    color: var(--white-clr);
+    background-color: var(--light-grey-clr);
+}
+
+.rating__item input {
+    display: none;
+}
+
+#rating__btn {
+    cursor: pointer;
+    width: 100%;
+    margin-top: 2rem;
+    padding: .8em 0;
+    color: var(--white-clr);
+    background-color: var(--orange-clr);
+    border: none;
+    border-radius: 100px; /* 6.25rem */
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--overpass-font-400-700);
+    letter-spacing: .1rem;
+}
+
+#rating__btn:hover,
+#rating__btn:active {
+    color: var(--orange-clr);
+    background-color: var(--white-clr);
+}
+
+.thankyou__container {
+    display: none;
+    width: 100%;
+    max-width: 430px;
+    padding: 2rem;
+    background-color: var(--dark-blue-clr);
+    border-radius: 2rem;
+}
+
+.thankyou__img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 1rem auto;
+}
+
+.rating__result {
+    max-width: 200px;
+    margin: 2rem auto 0;
+    padding: .5rem 0;
+    color: var(--orange-clr);
+    background-color: var(--dark-blue-clr-2);
+    text-align: center;
+    border-radius: 100px;
+}
+
+.thankyou__title {
+    margin-top: 2rem;
+    color: var(--white-clr);
+    text-align: center;
+}
+
+.thankyou__description {
+    margin: 1rem 0;
+    color: var(--light-grey-clr);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Media Query for mobile size */
+@media screen and (max-width: 480px) {
+    .rating__container {
+        max-width: 380px;
+        width: 95%;
+        margin: 0 auto;
+        padding: 2rem 1.8rem;
+        border-radius: 20px;
+    }
+
+    .rating__title {
+        font-size: 1.55rem;
+    }
+
+    .rating__description {
+        font-size: .9rem;
+    }
+
+    .rating__form {
+        margin-top: 2rem;
+    }
+
+    .rating__item:nth-child(1) {
+        padding: .6rem 1.1rem;
+    }
+
+    .rating__item:not(:nth-child(1)) {
+        padding: .6rem 1rem;
+    }
+
+    .thankyou__container {
+        max-width: 380px;
+        width: 95%;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 1.3rem;
+        border-radius: 20px;
+    }
+
+    .rating__result {
+        font-size: .9rem;
+    }
+
+    .thankyou__title {
+        font-size: 1.55rem;
+    }
+
+    .thankyou__description {
+        font-size: .9rem;
+    }
+}
+
