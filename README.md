@@ -14,4 +14,14 @@
         <td><img src="images/day1/day1-a.png" alt="Day 1 Image-1"></td>
         <td><img src="images/day1/day1-b.png" alt="Day 1 Image-2"></td>
     </tr>
+    <tr>
+        <td><img src="images/day1/day1-c.png" alt="Day 1 Image-3"></td>
+        <td><img src="images/day1/day1-d.png" alt="Day 1 Image-4"></td>
+    </tr>
 </table>
+
+### Responsive Web Design:
+- Learn the CSS Box Model by Building a Rothko Painting
+- Learn CSS Flexbox by Building a Photo Gallery
+- Learn Typography by Building a Nutrition Label
+- Learn Accessibility by Building a Quiz
