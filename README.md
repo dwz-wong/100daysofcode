@@ -25,3 +25,16 @@
 - Learn CSS Flexbox by Building a Photo Gallery
 - Learn Typography by Building a Nutrition Label
 - Learn Accessibility by Building a Quiz
+
+### Day 2:
+
+![Day 2 Image-1](images/day2/day2-a.png)
+![Day 2 Image-2](images/day2/day2-b.png)
+![Day 2 Image-3](images/day2/day2-c.png)
+
+### Sololearn:
+- HTML (Hypertext Markup Language)
+    - Overview
+    - HTML Basics
+    - Challenges
+    - HTML5
